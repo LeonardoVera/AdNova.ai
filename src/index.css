@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-deep: #0B132B;
+  --primary-medium: #1C2541;
+  --primary-accent: #2A3D66;
+  
+  --emerald-brand: #059669;
+  --emerald-light: #34D399;
+  --emerald-dark: #064E3B;
+
+  /* HSL Values (for custom opacities) */
+  --primary-deep-hsl: 222, 47%, 11%;
+  --emerald-brand-hsl: 160, 84%, 39%;
+
+  /* Neutrals (Slate System - Light Mode Primary) */
+  --bg-white: #FFFFFF;
+  --bg-slate-50: #F8FAFC;
+  --border-slate-100: #F1F5F9;
+  --border-slate-200: #E2E8F0;
+  
+  --text-muted: #64748B;
+  --text-body: #334155;
+  --text-title: #0F172A;
+
+  /* Gradients */
+  --gradient-ai-primary: linear-gradient(135deg, var(--primary-deep) 0%, var(--emerald-brand) 100%);
+  --gradient-ai-glow: linear-gradient(135deg, var(--primary-accent) 0%, var(--emerald-light) 100%);
+
+  /* Semantic Colors */
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --color-success: #10B981;
+  --color-info: #0EA5E9;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Border Radius & Shadows */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.08);
+}
+
+/* Reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-white);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-title);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-body);
+}
+
+a {
+  color: var(--emerald-brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--emerald-light);
+}
+
+/* Containers & Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Utilities */
+.text-gradient-ai {
+  background: var(--gradient-ai-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-ai {
+  background: var(--gradient-ai-primary);
+}
+
+/* Button Reset & Base styles */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-slate-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-slate-200);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
